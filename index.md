@@ -45,16 +45,31 @@ for(i in 1:length(locate_digits)){
 text_subset <- data.frame(text_subset[1:length(text_subset)])
 ```
 
-Now, it is just a matter of finding a proper stopping rule for the subsets. For example, whenever the chairman of the session takes over the word, the spoken text of the politician talking before that must end. 
+Now, it is just a matter of finding a proper stopping rule for the subsets. For example, whenever the chairman of the session takes over the word, the spoken text of the politician talking before that must end. Let's keep track of how many non-spoken characters we remove by a _counter_. 
 
 ```R
-// R code.
-library(textreadr)
-url <- "https://www.dekamer.be/doc/PCRI/html/54/ip111x.html"
-txt <- read_html(url)
-mystring <- paste(c(txt[1:length(txt)]), collapse = " ")
-(nchar(mystring))
+stopping_rule <- function(e){
+  counter <- sum(nchar(as.character(e[,])))
+  
+  f <- data.frame()
+  for(i in 1:dim(e)[1]){
+    if(grepl("De voorzitter", as.character(e[i,1]), fixed = TRUE)==TRUE){
+      f[i,1] <- str_sub(e[i,1], 1, stri_locate_first(pattern = "De voorzitter", as.character(e[i,1]), fixed = TRUE, case_insensitive=F)[1]-1)
+    }
+    else{
+      f[i,1] <- as.character(e[i,1])
+    }
+  }
+  e <- f
+  counter <- c(counter, sum(nchar(as.character(e[,]))))
+    
+  l1 <- list(e, counter)
+  return(l1)
+}
 ```
+
+Hereby we reduce the total number of characters by ...
+Note that this only traces the character location whenever 'De voorzitter' starts speaking in a particular string, and consequently removes whatever characters comes after this location. The critical reader might observe that the plenary sessions are alternately spoken in Dutch and French, and 'De voorzitter' solely traces the Dutch variant of chairman. Therefore, inclusion of chairman in French simply translates to 'Le président', and the code above is adjusted in a similar fashion to only retain the relevant information. 
 
 ### Markdown
 
