@@ -45,7 +45,7 @@ for(i in 1:length(locate_digits)){
 text_subset <- data.frame(text_subset[1:length(text_subset)])
 ```
 
-Now, it is just a matter of finding a proper stopping rule for the subsets. For example, whenever the chairman of the session takes over the word, the spoken text of the politician talking before that must end. Let's keep track of how many non-spoken characters we remove by a _counter_. 
+Now, it is just a matter of finding a proper stopping rule for the subsets. For example, whenever the chairman of the session takes over the word, the spoken text of the politician talking before that must end. Let's keep track of how many non-spoken characters we remove by a `counter`. 
 
 ```R
 stopping_rule <- function(e){
@@ -69,39 +69,11 @@ stopping_rule <- function(e){
 spoken_text <- stopping_rule(text_subset)
 ```
 
-Note that this only traces the character location whenever 'De voorzitter' starts speaking in a particular string, and consequently removes whatever characters comes after this location. The critical reader might observe that the plenary sessions are alternately spoken in Dutch and French, and 'De voorzitter' solely traces the Dutch variant of chairman. Therefore, inclusion of chairman in French simply translates to 'Le président', and the code above is adjusted in a similar fashion to only retain the relevant information. 
+Note that this only traces the character location whenever 'De voorzitter' starts speaking in a particular string, and consequently removes whatever characters comes after this location. A critical reader might observe that the plenary sessions are alternately spoken in Dutch and French, and 'De voorzitter' solely traces the Dutch variant of chairman. Therefore, inclusion of chairman in French simply translates to 'Le président', and the code above is adjusted in a similar fashion to only retain the relevant information. 
 
 Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. The dataset of this specific session is given at the beginning. Now, one can finetune the stopping rules a bit further, and simply iterate over all the other sessions, and this will result in the final dataset. 
 
+### More coming soon
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/paulstroet/bds_thesis/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Contact
+For any queries and/or interest for collaborations on exciting projects, please reach me at p.stroet@businessdatascience.nl
