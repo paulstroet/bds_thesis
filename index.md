@@ -16,7 +16,7 @@ mystring <- paste(c(txt[1:length(txt)]), collapse = " ")
 (nchar(mystring))
 ```
 
-Now, the data is stored as one string in R and contains 231718 characters. The trick here is to extract only the information in this string which is of relevance, ie the spoken text of each politician. One can do so by subsetting the string (from the first character to the last character) into chunks of spoken text, and consequently concatenating these string subsets per politican, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The criteria of these subsets are the digits a priori a politician starts to speak (eg 01.01 _before_ Laurette Onkelinx, 01.02 _before_ Barbara Pas, etc). One achieves this as follows.
+Now, the data is stored as one string in R and contains 231718 characters. The trick here is to extract only the information in this string which is of relevance, ie the spoken text of each politician. One can do so by subsetting the string (from the first character to the last character) into chunks of spoken text, and consequently concatenating these string subsets per politican. The criteria of these subsets are the digits a priori a politician starts to speak (eg 01.01 _before_ Laurette Onkelinx, 01.02 _before_ Barbara Pas, etc). One achieves this as follows.
 
 ```R
 library(stringi)
@@ -66,10 +66,13 @@ stopping_rule <- function(e){
   l1 <- list(e, counter)
   return(l1)
 }
+spoken_text <- stopping_rule(text_subset)
 ```
 
-Hereby we reduce the total number of characters by ...
 Note that this only traces the character location whenever 'De voorzitter' starts speaking in a particular string, and consequently removes whatever characters comes after this location. The critical reader might observe that the plenary sessions are alternately spoken in Dutch and French, and 'De voorzitter' solely traces the Dutch variant of chairman. Therefore, inclusion of chairman in French simply translates to 'Le président', and the code above is adjusted in a similar fashion to only retain the relevant information. 
+
+Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. The dataset of this specific session is given at the beginning. Now, one can finetune the stopping rules a bit further, and simply iterate over all the other sessions, and this will result in the final dataset. 
+
 
 ### Markdown
 
