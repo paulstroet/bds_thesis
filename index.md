@@ -74,7 +74,7 @@ Note that this only traces the character location whenever 'De voorzitter' start
 Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. Now, one can finetune the stopping rules a bit further, and simply iterate over all the other sessions, and this will result in the final dataset encapsulating all sessions. 
 
 ### Datasets
-The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111'. The complete dataset of all plenary sessions in the 54th parliamentary term under the name of 'all_sessions'. Session 111 is viewable via Excel, however, due to 
+The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111' (in xslx format). Another dataset of all spoken text in all plenary sessions in the 54th parliamentary term for 10 random polilticians is accessible under the name of 'all_sessions_10' (Rdata object). Please contact me if you are interested in the complete dataset, whether this concerns the 54th parliamentary term, any other term, or multiple terms. 
 
 ### More coming soon
 
