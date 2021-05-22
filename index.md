@@ -1,8 +1,5 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/paulstroet/bds_thesis/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Welcome
+My name is [Paul Stroet](https://paulstroet.netlify.app/) and currently I am writing my thesis for the research master program Business Data Science. On this page I post weekly updates about the progress of my thesis. 
 
 ### Markdown
 
