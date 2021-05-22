@@ -2,3 +2,4 @@ theme: jekyll-theme-minimal
 title: BDS Thesis
 description: Construction of my thesis
 logo: /img.png
+show_downloads: "true"
