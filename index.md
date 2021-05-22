@@ -1,6 +1,17 @@
 ## Welcome
 My name is [Paul Stroet](https://paulstroet.netlify.app/) and currently I am writing my thesis for the research master program Business Data Science. On this page I post weekly updates about the progress of my thesis. 
 
+### Data collection
+In this section, I illustrate briefly how I collect my data. First, I take one random document from the list of 284 plenary sessions held in the 54th parliamentary term, say plenary session 111. 
+
+```R
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
