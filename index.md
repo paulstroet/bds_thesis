@@ -88,9 +88,8 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 | Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=54)   | 2014-2019    | 45                | 186             | 242929                             |
 | Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=55)   | 2019-now     | 18                | 182             |  98592                             |
 | Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=cri&count=all)   | 2014-2019     | tba                | tba             |  tba                             |
-| Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=CRI&count=all&legislat=55)   | 2019-now     | 89                | tba             |  tba                             |
+| Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=CRI&count=all&legislat=55)   | 2019-now     | 89                | 257             |  tba                             |
 
-add flag
 
 ### More coming soon
 I wrote the code in a generic way, ie it is easily adaptable to different formats and it has a quick and insightful debug function. Soon I will illustrate how this is done. Also, I will set forth the preliminary analysis of the text data, the modifications to the LDA algorithm I make and a clever way how to extract subsets of the data to fastly train and fine-tune the algorithm on, while maintaining performance when training on the whole training set. 
