@@ -78,6 +78,26 @@ Note that this only traces the character location whenever 'De voorzitter' start
 
 Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. Now, one can finetune the starting and stopping rules a bit further, simply iterate over all the other sessions, and this will result in the final dataset encapsulating all plenary sessions of parliamentary term 54. Then, the same ideas apply to (1) parliamentary term 55 and the committee sessions in a given parliamentary term. 
 
+```R
+conc <- function(g){
+  h <- with(g, g[order(g[,1]),])
+  k <- data.frame(levels(g[,1]))
+  l <- rep("", nlevels(h[,1]))
+  for(i in 1:dim(h)[1]){
+    for(j in 1:nlevels(h[,1])){
+      if(nlevels(h[,1])==0){next}
+      if(h[i,1]==levels(h[,1])[j]){
+        l[j] <- paste(c(as.character(l[j]), as.character(h[i,2])), collapse = " ")
+      }
+    }
+  }
+  m <- data.frame(k,l)
+  names(m) <- c("politician", "text")
+  return(m)
+}
+spoken_text_per_politician <- conc(all)
+```
+
 ### Datasets
 The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111' (in `.xlsx` format). Please contact me if you are interested in the complete dataset containing all spoken text of all plenary sessions, whether this concerns the 54th parliamentary term, any other term, or multiple terms. Below I provide a brief overview of the corpora of terms 54 and 55. 
 
