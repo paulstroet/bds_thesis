@@ -117,7 +117,7 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 | Parliament   | Session   | Period  | Number of documents     | File size (MB)    | Unique speakers |Average character count per speaker |
 |:-------------|:----------|:-------------|:-------------|:------------------|:----------------|:-----------------------------------|
 | Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=55)   | 2019-now     | 105  | 18                | 182             |  98592                             |
-| Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=CRI&count=all&legislat=55)   | 2019-now  | 484   | tba                | tba             |  tba                             |
+| Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=CRI&count=all&legislat=55)   | 2019-now  | 484   | 33                | 203             |  176927                             |
 
 Note that this parliamentary term is ongoing. Since my dataset is of a dynamic nature, these new documents will automatically be scraped, cleaned and added to the aggregate dataset as soon as they are uploaded to the [host](https://www.dekamer.be/kvvcr/index.cfm?language=nl). 
 
