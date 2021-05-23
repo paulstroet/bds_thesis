@@ -20,7 +20,7 @@ mystring <- paste(c(txt[1:length(txt)]), collapse = " ")
 
 #### Starting rule
 
-Now, the data is stored as one string in R and contains 231718 characters. The trick here is to extract only the information in this string which is of relevance, ie the spoken text of each politician. One can do so by first cleaning the html text into readable text (I use `BeautifulSoup` and consequently `gsub()` for this), subsetting the string (from the first character to the last character) into chunks of spoken text, and consequently concatenating these string subsets per politican. The criteria on which these subsets start with I call the `starting rule`. An example of such a `starting rule` are the digits a priori a politician starts to speak (eg 01.01 _before_ Laurette Onkelinx, 01.02 _before_ Barbara Pas, etc). One achieves this as follows.
+Now, the data is stored as one string in R and contains 231718 characters. The trick here is to extract only the information in this string which is of relevance, ie the spoken text of each politician. One can do so by first cleaning the html text into readable text (I use `BeautifulSoup` and consequently `gsub()` for this), subsetting the string (from the first character to the last character) into chunks of spoken text, and consequently concatenating these string subsets per politican. Let's call the criteria on which these subsets start with a starting rule. An example of such a starting rule are the digits a priori a politician starts to speak (eg 01.01 _before_ Laurette Onkelinx, 01.02 _before_ Barbara Pas, etc). One extracts these as follows.
 
 ```R
 library(stringi)
@@ -50,7 +50,7 @@ text_subset <- data.frame(text_subset[1:length(text_subset)])
 ```
 
 #### Stopping rule
-Now, it is just a matter of finding a proper stopping rule for the subsets. For example, whenever the chairman of the session takes over the word, the spoken text of the politician talking before that must end. Let's keep track of how many non-spoken characters we remove by a `counter`. 
+Now, it is just a matter of finding a proper stopping rule for the subsets. For example, whenever the chairman of the session takes over the word, the spoken text of the politician talking before that must end. We can keep track of how many non-spoken characters we remove by a `counter`. 
 
 ```R
 stopping_rule <- function(e){
@@ -78,7 +78,7 @@ Note that this only traces the character location whenever 'De voorzitter' start
 
 #### Aggregate
 
-Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. 
+Now, we concatenate these string subsets per politican, and save it as `spoken_text_per_politician`, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 35 observations. So, 35 unique politicians contributed verbally to the session in plenary session 111. 
 
 ```R
 conc <- function(g){
