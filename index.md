@@ -76,6 +76,14 @@ Now, we concatenate these string subsets per politican, and save it as spoken_te
 ### Datasets
 The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111' (in .xlsx format). Please contact me if you are interested in the complete dataset containing all spoken text of all plenary sessions, whether this concerns the 54th parliamentary term, any other term, or multiple terms. 
 
+### Summary statistics parliamentary session 54
+| File size (MB)| Period        | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
 ### More coming soon
 
 ### Contact
