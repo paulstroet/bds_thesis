@@ -36,7 +36,7 @@ extract_digits <- function(mystring){
   }
 }
 relevant_digits <- extract_digits(mystring)
-locate_digits <- stri_locate_all(pattern = a, mystring, fixed = TRUE)
+locate_digits <- stri_locate_all(pattern = relevant_digits, mystring, fixed = TRUE)
 text_subset <- NULL
 for(i in 1:length(locate_digits)){
   if(i < length(locate_digits)){
