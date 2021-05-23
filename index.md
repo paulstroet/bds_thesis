@@ -86,10 +86,7 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 | Parliament   | Session   | Period  | Number of documents     | File size (MB)    | Unique speakers |Average character count per speaker |
 |:-------------|:----------|:-------------|:-------------|:------------------|:----------------|:-----------------------------------|
 | Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=54)   | 2014-2019    | 284 | 45                | 186             | 242929                             |
-| Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=55)   | 2019-now     | 105 (weekly updated) | 18                | 182             |  98592                             |
 | Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=cri&count=all)   | 2014-2019 | 1077    | 89                | 257             |  342652                             |
-| Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=CRI&count=all&legislat=55)   | 2019-now  | 484 (weekly updated)   | tba                | tba             |  tba                             |
-
 
 ### Summary statistics parliamentary term 55
 
