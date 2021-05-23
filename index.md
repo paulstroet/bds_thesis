@@ -16,7 +16,7 @@ mystring <- paste(c(txt[1:length(txt)]), collapse = " ")
 (nchar(mystring))
 ```
 
-Now, the data is stored as one string in R and contains 231718 characters. The trick here is to extract only the information in this string which is of relevance, ie the spoken text of each politician. One can do so by subsetting the string (from the first character to the last character) into chunks of spoken text, and consequently concatenating these string subsets per politican. The criteria of these subsets are the digits a priori a politician starts to speak (eg 01.01 _before_ Laurette Onkelinx, 01.02 _before_ Barbara Pas, etc). One achieves this as follows.
+Now, the data is stored as one string in R and contains 231718 characters. The trick here is to extract only the information in this string which is of relevance, ie the spoken text of each politician. One can do so by first cleaning the html text into readable text (I use gsub() for this), subsetting the string (from the first character to the last character) into chunks of spoken text, and consequently concatenating these string subsets per politican. The criteria of these subsets are the digits a priori a politician starts to speak (eg 01.01 _before_ Laurette Onkelinx, 01.02 _before_ Barbara Pas, etc). One achieves this as follows.
 
 ```R
 library(stringi)
@@ -81,6 +81,7 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 | Parliament   | Session   | Period       | File size (MB)    | Unique speakers |Average character count per speaker |
 |:-------------|:----------|:-------------|:------------------|:----------------|:-----------------------------------|
 | Belgium      | Plenary   | 2014-2019    | 45                | 186             | 242929                             |
+| Belgium      | Plenary   | 2019-now     | 18                | 182             |  98592                             |
 
 add flag
 
