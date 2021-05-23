@@ -121,6 +121,8 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 
 Note that this parliamentary term is ongoing. Since my dataset is of a dynamic nature, these new documents will automatically be scraped, cleaned and added to the aggregate dataset as soon as they are uploaded to the [host](https://www.dekamer.be/kvvcr/index.cfm?language=nl). 
 
+* * *
+
 ### More coming soon
 I wrote the code in a generic way, ie it is easily adaptable to different formats and it has a quick and insightful debug function. Soon I will illustrate how this is done. Also, I will set forth the preliminary analysis of the text data, the modifications to the LDA algorithm I make and a clever way how to extract subsets of the data to fastly train and fine-tune the algorithm on, while maintaining performance when training on the whole training set. 
 
