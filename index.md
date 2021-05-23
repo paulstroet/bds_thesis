@@ -79,23 +79,23 @@ Note that this only traces the character location whenever 'De voorzitter' start
 Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. Now, one can finetune the starting and stopping rules a bit further, simply iterate over all the other sessions, and this will result in the final dataset encapsulating all plenary sessions of parliamentary term 54. Then, the same ideas apply to (1) parliamentary term 55 and the committee sessions in a given parliamentary term. 
 
 ### Datasets
-The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111' (in `.xlsx` format). Please contact me if you are interested in the complete dataset containing all spoken text of all plenary sessions, whether this concerns the 54th parliamentary term, any other term, or multiple terms. Below I provide some details of the corpora of terms 54 and 55. 
+The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111' (in `.xlsx` format). Please contact me if you are interested in the complete dataset containing all spoken text of all plenary sessions, whether this concerns the 54th parliamentary term, any other term, or multiple terms. Below I provide a brief overview of the corpora of terms 54 and 55. 
 
-### Summary statistics parliamentary term 54
+### Parliamentary term 54
 
 | Parliament   | Session   | Period  | Number of documents     | File size (MB)    | Unique speakers |Average character count per speaker |
 |:-------------|:----------|:-------------|:-------------|:------------------|:----------------|:-----------------------------------|
 | Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=54)   | 2014-2019    | 284 | 45                | 186             | 242929                             |
 | Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=cri&count=all)   | 2014-2019 | 1077    | 89                | 257             |  342652                             |
 
-### Summary statistics parliamentary term 55
+### Parliamentary term 55
 
 | Parliament   | Session   | Period  | Number of documents     | File size (MB)    | Unique speakers |Average character count per speaker |
 |:-------------|:----------|:-------------|:-------------|:------------------|:----------------|:-----------------------------------|
 | Belgium      | [Plenary](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=55)   | 2019-now     | 105  | 18                | 182             |  98592                             |
 | Belgium      | [Committee](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=comm&cricra=CRI&count=all&legislat=55)   | 2019-now  | 484   | tba                | tba             |  tba                             |
 
-Note that this parliamentary term is ongoing. Since my dataset is of a dynamic nature, these new documents will automatically be scraped, cleaned and added to the aggregate dataset as soon as they are uploaded to [the host](www.dekamer.be). 
+Note that this parliamentary term is ongoing. Since my dataset is of a dynamic nature, these new documents will automatically be scraped, cleaned and added to the aggregate dataset as soon as they are uploaded to the [host](https://www.dekamer.be/kvvcr/index.cfm?language=nl). 
 
 ### More coming soon
 I wrote the code in a generic way, ie it is easily adaptable to different formats and it has a quick and insightful debug function. Soon I will illustrate how this is done. Also, I will set forth the preliminary analysis of the text data, the modifications to the LDA algorithm I make and a clever way how to extract subsets of the data to fastly train and fine-tune the algorithm on, while maintaining performance when training on the whole training set. 
