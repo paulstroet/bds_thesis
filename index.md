@@ -78,11 +78,10 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 
 ### Summary statistics parliamentary session 54
 
-| Parliament   | Session   | Period       | File size (MB)    | Unique speakers |
-|:-------------|:----------|:-------------|:------------------|:----------------|
-| Belgium      | Plenary   | 2014-2019    | 45                | 186             |
+| Parliament   | Session   | Period       | File size (MB)    | Unique speakers |Average character count per speaker |
+|:-------------|:----------|:-------------|:------------------|:----------------|:-----------------------------------|
+| Belgium      | Plenary   | 2014-2019    | 45                | 186             | 242929                             |
 
-parliament: Belgium
 add flag
 
 ### More coming soon
