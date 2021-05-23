@@ -76,12 +76,12 @@ Note that this only traces the character location whenever 'De voorzitter' start
 
 #### Aggregate
 
-Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. Now, one can finetune the stopping rules a bit further, and simply iterate over all the other sessions, and this will result in the final dataset encapsulating all sessions. 
+Now, we concatenate these string subsets per politican, and save it as spoken_text_per_politician, so all spoken text from one politician is summarized into one string. This makes merging of the different plenary sessions in a later stadium easier. The result is a dataset with two variables (the unique politician, and all spoken text of that politician concatenated into one string) and 37 observations. So, 37 unique politicians contributed to the session in plenary session 111. Now, one can finetune the starting and stopping rules a bit further, simply iterate over all the other sessions, and this will result in the final dataset encapsulating all plenary sessions of parliamentary term 54. Then, the same ideas apply to (1) parliamentary term 55 and the committee sessions in a given parliamentary term. 
 
 ### Datasets
 The dataset of this specific session is accessible via 'Download ZIP File' on the left, under the name of 'session_111' (in `.xlsx` format). Please contact me if you are interested in the complete dataset containing all spoken text of all plenary sessions, whether this concerns the 54th parliamentary term, any other term, or multiple terms. 
 
-### Summary statistics parliamentary session 54
+### Summary statistics parliamentary term 54
 
 | Parliament   | Session   | Period       | File size (MB)    | Unique speakers |Average character count per speaker |
 |:-------------|:----------|:-------------|:------------------|:----------------|:-----------------------------------|
