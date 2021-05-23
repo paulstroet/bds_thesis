@@ -80,9 +80,6 @@ The dataset of this specific session is accessible via 'Download ZIP File' on th
 | Period       | File size (MB)    | Unique speakers |
 |:-------------|:------------------|:----------------|
 | 2014-2019    | 45                | 186             |
-| out of stock | good and plenty   | nice            |
-| ok           | good `oreos`      | hmm             |
-| ok           | good `zoute` drop | yumm            |
 
 ### More coming soon
 
