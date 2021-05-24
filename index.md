@@ -1,5 +1,5 @@
 ## Welcome
-My name is [Paul Stroet](https://paulstroet.netlify.app/) and currently I am writing my thesis under supervision of prof. [van de Wardt](http://www.marcvandewardt.com/) for the research master program [Business Data Science](https://businessdatascience.nl/home). On this page I post weekly updates about the progress of my thesis. 
+My name is [Paul Stroet](https://paulstroet.netlify.app/) and currently I am writing my thesis under supervision of prof. [van de Wardt](http://www.marcvandewardt.com/) for the research master program [Business Data Science](https://businessdatascience.nl/home). On this page I post about the progress of my thesis. 
 
 **Keywords**: Natural Language Processing, Web-scraping, Automated Content Analysis
 
