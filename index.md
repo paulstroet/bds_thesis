@@ -1,12 +1,12 @@
 ## Welcome
-My name is [Paul Stroet](https://paulstroet.netlify.app/) and currently I am writing my thesis under supervision of prof. [van de Wardt](http://www.marcvandewardt.com/) for the research master program [Business Data Science](https://businessdatascience.nl/home). On this page I post about the progress of my thesis. 
+My name is [Paul Stroet](https://paulstroet.netlify.app/) and currently I am writing my thesis under supervision of prof. [van de Wardt](http://www.marcvandewardt.com/) for the research master program [Business Data Science](https://businessdatascience.nl/home). 
 
 **Keywords**: Natural Language Processing, Web-scraping, Automated Content Analysis
 
 * * *
 
 ### General idea
-In a broad sense, I deploy advanced natural language processing (NLP) techniques to extract features from text data and consequently use these features in predictive modeling. This text data is web-scraped and in first instance concerns the parliamentary speeches from Belgium, but in a later stage I might expand on this with more countries. The choice for Belgium is made in consultation with prof. van de Wardt, as (1) this country has not yet been web-scraped (ie, not included in the [ParlSpeech V2 dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L4OAKN)) and therefore the dataset itself could serve as a valuable contribution to ParlSpeech, and (2) we have personality scores for the politicians in (among others) the Belgium parliament. Using this text data, I attempt to successfully predict the personality scores. The construction of my predictive model will folllow. 
+In a broad sense, I deploy advanced natural language processing (NLP) techniques to extract features from text data and consequently use these features in predictive modeling. This text data is web-scraped and in first instance concerns the parliamentary speeches from Belgium, but in a later stage I might expand on this with more countries. The choice for Belgium is made in consultation with prof. van de Wardt, as (1) this country has not yet been web-scraped (ie, not included in the [ParlSpeech V2 dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L4OAKN)) and therefore the dataset itself could serve as a valuable contribution to ParlSpeech, and (2) we have personality scores for the politicians in (among others) the Belgium parliament. Using this text data, I attempt to successfully predict the personality scores. On this project page I illustrate by means of examples how the web-scraping proecess took place. 
 
 ### Data collection
 In this section, I illustrate briefly how I collect my data. First, I take one random document from the list of [284 plenary sessions](https://www.dekamer.be/kvvcr/showpage.cfm?section=/cricra&language=nl&cfm=dcricra.cfm?type=plen&cricra=CRI&count=all&legislat=54) held in the 54th parliamentary term, say [plenary session 111](https://www.dekamer.be/doc/PCRI/pdf/54/ip111.pdf), and consequently use this document to elaborate on the steps needed to make the data operational. 
@@ -127,8 +127,8 @@ Note that this parliamentary term is ongoing. Since my dataset is of a dynamic n
 
 * * *
 
-### More coming soon
-I wrote the code in a generic way, ie it is easily adaptable to different formats and it has a quick and insightful debug function. Soon I will illustrate how this is done. Also, I will set forth the preliminary analysis of the text data, the modifications to the LDA algorithm I make and a clever way how to extract subsets of the data to fastly train and fine-tune the algorithm on, while maintaining performance when training on the whole training set. 
+### Ending comments
+I wrote the code in a generic way, ie it is easily adaptable to different formats and it has a quick and insightful debug function. In my thesis I have set forth the preliminary analysis of the text data, the modifications to the LDA algorithm I make and a clever way how to extract subsets of the data to fastly train and fine-tune the algorithm on, while maintaining performance when training on the whole training set. 
 
 ### Contact
 For any queries and/or interest for collaborations on exciting projects, please reach me at p.stroet@businessdatascience.nl
